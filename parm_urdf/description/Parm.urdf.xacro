@@ -42,14 +42,14 @@
 
     <link name="ax2_ax3_link_1">
         <visual>
-            <origin xyz="0.0 0.0 -0.2" rpy="0 0 0"/>
+            <origin xyz="0.0 0.0 -0.2017" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax2_ax3_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.2" rpy="0 0 0"/>
+            <origin xyz="0.0 0.0 -0.2017" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax2_ax3_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -58,14 +58,14 @@
 
     <link name="ax3_ax4_link_1">
         <visual>
-            <origin xyz="0.26 0.0 -0.22" rpy="0 0 0"/>
+            <origin xyz="0.2695 0.0 -0.218" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax3_ax4_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
-            <origin xyz="0.26 0.0 -0.22" rpy="0 0 0"/>
+            <origin xyz="0.2695 0.0 -0.218" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax3_ax4_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -74,14 +74,14 @@
 
     <link name="ax4_ax5_link_1">
         <visual>
-            <origin xyz="0.03 0.0 0.03" rpy="0 0 ${PI/2}"/>
+            <origin xyz="0.0303 0.0 0.03" rpy="0 0 ${PI/2}"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax4_ax5_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
-            <origin xyz="0.03 0.0 0.03" rpy="0 0 ${PI/2}"/>
+            <origin xyz="0.0303 0.0 0.03" rpy="0 0 ${PI/2}"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax4_ax5_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -106,14 +106,14 @@
 
     <link name="ax5_ax6_link_1">
         <visual>
-            <origin xyz="0.18 0.0 -0.028" rpy="${-PI/2} 0 0"/>
+            <origin xyz="0.18 0.0 -0.0273" rpy="${-PI/2} 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax5_ax6_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
-            <origin xyz="0.18 0.0 -0.028" rpy="${-PI/2} 0 0"/>
+            <origin xyz="0.18 0.0 -0.0273" rpy="${-PI/2} 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax5_ax6_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -122,14 +122,14 @@
 
     <link name="ax6_gripper_link_1">
         <visual>
-            <origin xyz="0.34 0.0 -0.025" rpy="${-PI/2} 0 0"/>
+            <origin xyz="0.3425 0.0001 -0.025" rpy="${-PI/2} 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax6_gripper_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
-            <origin xyz="0.34 0.0 -0.025" rpy="${-PI/2} 0 0"/>
+            <origin xyz="0.3425 0.0001 -0.025" rpy="${-PI/2} 0 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/ax6_gripper_link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -138,14 +138,14 @@
 
     <link name="gripper_link">
         <visual>
-            <origin xyz="0.0 0.0 0.076" rpy="0 ${-PI/2} 0"/>
+            <origin xyz="0.0 0.0 0.077" rpy="0 ${-PI/2} 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/gripper_link.stl" scale="1 1 1"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 0.076" rpy="0 ${-PI/2} 0"/>
+            <origin xyz="0.0 0.0 0.077" rpy="0 ${-PI/2} 0"/>
             <geometry>
                 <mesh filename="package://parm_urdf/meshes/gripper_link.stl" scale="1 1 1"/>
             </geometry>
@@ -200,27 +200,27 @@
     </joint>
 
     <joint name="revolute_2" type="revolute">
-        <origin xyz="0.0 0.0 0.2" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.202" rpy="0 ${PI/4} 0"/>
         <parent link="ax1_ax2_link_1"/>
         <child link="ax2_ax3_link_1"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="0.0" upper="${PI-PI/4}" effort="30" velocity="1.0"/>
+    </joint>
+
+    <joint name="revolute_3" type="revolute">
+        <origin xyz="-0.2695 0.0 0.0165" rpy="0 ${PI/8} 0"/>
+        <parent link="ax2_ax3_link_1"/>
+        <child link="ax3_ax4_link_1"/>
         <axis xyz="0.0 1.0 0.0"/>
         <limit lower="0.0" upper="${PI}" effort="30" velocity="1.0"/>
     </joint>
 
-    <joint name="revolute_3" type="revolute">
-        <origin xyz="-0.27 0.0 0.01" rpy="0 -0.5 0"/>
-        <parent link="ax2_ax3_link_1"/>
-        <child link="ax3_ax4_link_1"/>
-        <axis xyz="0.0 -1.0 0.0"/>
-        <limit lower="0.0" upper="${PI/8.0}" effort="30" velocity="1.0"/>
-    </joint>
-
     <joint name="revolute_4" type="revolute">
-        <origin xyz="-0.25 0.0 0.025" rpy="0 0 0"/>
+        <origin xyz="-0.2387 0.0 0.0255" rpy="0 ${-PI/2} 0"/>
         <parent link="ax3_ax4_link_1"/>
         <child link="ax4_ax5_link_1"/>
         <axis xyz="0.0 1.0 0.0"/>
-        <limit lower="0.0" upper="${5.0*PI/4.0}" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="${PI}" effort="30" velocity="1.0"/>
     </joint>
     <joint name="fixed_con" type="fixed">
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -233,15 +233,15 @@
         <parent link="ax4_ax5_link_2"/>
         <child link="ax5_ax6_link_1"/>
         <axis xyz="1.0 0.0 0.0"/>
-        <limit lower="0.0" upper="${5.0*PI/4.0}" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="${2*PI}" effort="30" velocity="1.0"/>
     </joint>
 
     <joint name="revolute_6" type="revolute">
-        <origin xyz="-0.16 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="-0.163 0.0 0.0" rpy="0 0 0"/>
         <parent link="ax5_ax6_link_1"/>
         <child link="ax6_gripper_link_1"/>
         <axis xyz="0.0 0.0 1.0"/>
-        <limit lower="0.0" upper="${5.0*PI/4.0}" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="${PI}" effort="30" velocity="1.0"/>
     </joint>
     <joint name="fixed_gripper" type="fixed">
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
