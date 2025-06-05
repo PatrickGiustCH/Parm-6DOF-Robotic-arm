@@ -208,7 +208,7 @@
     </joint>
 
     <joint name="revolute_3" type="revolute">
-        <origin xyz="-0.2695 0.0 0.0165" rpy="0 ${PI/8} 0"/>
+        <origin xyz="-0.2695 0.0 0.0165" rpy="0 ${PI/4} 0"/>
         <parent link="ax2_ax3_link_1"/>
         <child link="ax3_ax4_link_1"/>
         <axis xyz="0.0 1.0 0.0"/>
@@ -216,7 +216,7 @@
     </joint>
 
     <joint name="revolute_4" type="revolute">
-        <origin xyz="-0.2387 0.0 0.0255" rpy="0 ${-PI/2} 0"/>
+        <origin xyz="-0.2387 0.0 0.0255" rpy="0 ${-PI/4} 0"/>
         <parent link="ax3_ax4_link_1"/>
         <child link="ax4_ax5_link_1"/>
         <axis xyz="0.0 1.0 0.0"/>
