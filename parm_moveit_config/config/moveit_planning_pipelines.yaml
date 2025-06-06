@@ -1,0 +1,45 @@
+planning_pipelines:
+  pipeline_names: [ompl]
+  ompl:
+    planning_plugin: ompl_interface/OMPLPlanner
+    request_adapters: >-
+      default_planner_request_adapters/AddTimeOptimalParameterization
+      default_planner_request_adapters/FixWorkspaceBounds
+      default_planner_request_adapters/FixStartStateBounds
+      default_planner_request_adapters/FixStartStateCollision
+      default_planner_request_adapters/FixStartStatePathConstraints
+    max_range: 5.0
+    start_state_max_bounds_error: 0.1
+    planning_time: 5.0
+    planners:
+      RRTConnectkConfigDefault:
+        type: geometric::RRTConnect
+
+ompl:
+  planner_configs:
+    - SBLkConfigDefault
+    - ESTkConfigDefault
+    - LBKPIECEkConfigDefault
+    - BKPIECEkConfigDefault
+    - KPIECEkConfigDefault
+    - RRTkConfigDefault
+    - RRTConnectkConfigDefault
+    - RRTstarkConfigDefault
+    - TRRTkConfigDefault
+    - PRMkConfigDefault
+    - PRMstarkConfigDefault
+
+  arm:
+    default_planner_config: RRTConnectkConfigDefault
+    planner_configs:
+      - SBLkConfigDefault
+      - ESTkConfigDefault
+      - LBKPIECEkConfigDefault
+      - BKPIECEkConfigDefault
+      - KPIECEkConfigDefault
+      - RRTkConfigDefault
+      - RRTConnectkConfigDefault
+      - RRTstarkConfigDefault
+      - TRRTkConfigDefault
+      - PRMkConfigDefault
+      - PRMstarkConfigDefault
