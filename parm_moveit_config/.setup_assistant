@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: parm_urdf
+    relative_path: description/Parm.urdf
+  srdf:
+    relative_path: config/robot.srdf
+  package_settings:
+    author_name: patrickgiust
+    author_email: patrickgiust@gmail.com
+    generated_timestamp: 1749155950
