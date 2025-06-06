@@ -16,6 +16,8 @@ find_package(rosidl_default_generators REQUIRED)
 
 install(PROGRAMS
     parm_ctrl/ee_to_joint.py
+    parm_ctrl/keyboard_pose_ctrl.py
+
   DESTINATION lib/${PROJECT_NAME}
 )
 

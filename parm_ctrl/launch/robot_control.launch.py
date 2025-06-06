@@ -31,7 +31,7 @@ def generate_launch_description():
         executable="ros2_control_node",
         parameters=[
             robot_description,
-            "/home/pgiust/parm_ws/src/Parm-6DOF-Robotic-arm/parm_moveit_config/config/ros2_controllers.yaml",
+            "/home/pgiust/Parm_ws/src/Parm-6DOF-Robotic-arm/parm_moveit_config/config/ros2_controllers.yaml",
         ],
         output="screen",
     )

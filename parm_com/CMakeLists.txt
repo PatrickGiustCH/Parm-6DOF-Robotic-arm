@@ -15,7 +15,8 @@ find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 install(PROGRAMS
-    parm_com_node.py
+    parm_com/parm_com_node.py
+    parm_com/hardware_emulator.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
