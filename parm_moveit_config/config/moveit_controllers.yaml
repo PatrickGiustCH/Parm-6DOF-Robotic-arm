@@ -1,5 +1,28 @@
-# MoveIt uses this configuration for controller management
+# Minimal controller configuration for ROS2 control and MoveIt
 
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      joints:
+        - revolute_1
+        - revolute_2
+        - revolute_3
+        - revolute_4
+        - revolute_5
+        - revolute_6
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity
+
+# MoveIt controller configuration
 moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
 
 moveit_simple_controller_manager:
@@ -9,6 +32,7 @@ moveit_simple_controller_manager:
   arm_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory
+    default: true
     joints:
       - revolute_1
       - revolute_2
@@ -16,4 +40,5 @@ moveit_simple_controller_manager:
       - revolute_4
       - revolute_5
       - revolute_6
+
 

@@ -11,30 +11,30 @@ joint_limits:
   revolute_1:
     has_velocity_limits: true
     max_velocity: 1.01
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 1.01
   revolute_2:
     has_velocity_limits: true
     max_velocity: 1.01
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 1.01
   revolute_3:
     has_velocity_limits: true
     max_velocity: 1.01
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 1.01
   revolute_4:
     has_velocity_limits: true
     max_velocity: 1.01
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 1.01
   revolute_5:
     has_velocity_limits: true
     max_velocity: 1.01
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 1.01
   revolute_6:
     has_velocity_limits: true
     max_velocity: 1.01
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 1.01
